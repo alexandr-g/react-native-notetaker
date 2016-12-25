@@ -7,6 +7,7 @@ import {
   TouchableHighlight,
   ActivityIndicatorIOS,
 } from 'react-native';
+import api from '../utils/api';
 
 const styles = StyleSheet.create({
   mainContainer: {
@@ -72,7 +73,26 @@ class Main extends Component {
     this.setState({
       isLoading: true
     })
-    console.log('submit', this.state.username)
+    api.getBio(this.state.username)
+      .then((res) => {
+        if(res.message === 'Not Found') {
+          this.setState({
+            error: 'User not found',
+            isLoading: false
+          })
+        } else {
+          this.props.navigator.push({
+            title: res.name || 'Select an Option',
+            component: Dashboard,
+            passProps: {userInfo: res}
+          })
+          this.setState({
+            isLoading: false,
+            error: false,
+            username: ''
+          })
+        }
+      })
   }
 
   render() {
