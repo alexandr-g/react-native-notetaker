@@ -6,8 +6,8 @@ import {
   StyleSheet,
   Image,
 } from 'react-native';
-
 import Badge from './Badge';
+import Separator from './helpers/Separator';
 
 const styles = StyleSheet.create({
     container: {
@@ -51,6 +51,7 @@ export default class Profile extends Component {
               <Text style={styles.rowTitle}> {this.getRowTitle(userInfo, item)} </Text>
               <Text style={styles.rowContent}> {userInfo[item]} </Text>
             </View>
+            <Separator />
           </View>
         )
       }
