@@ -6,6 +6,7 @@ import {
   Image,
   TouchableHighlight,
 } from 'react-native';
+import Profile from './Profile';
 
 const styles = StyleSheet.create({
   container: {
@@ -45,7 +46,11 @@ export default class Dashboard extends Component {
   }
 
   goToProfile() {
-    console.log('Going to Profile Page')
+    this.props.navigator.push({
+      component: Profile,
+      title: 'Profile Page',
+      passProps: {userInfo: this.props.userInfo}
+    })
   }
 
   goToRepos() {
