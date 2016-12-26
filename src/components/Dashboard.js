@@ -3,6 +3,8 @@ import {
   Text,
   View,
   StyleSheet,
+  Image,
+  TouchableHighlight,
 } from 'react-native';
 
 const styles = StyleSheet.create({
@@ -24,6 +26,7 @@ export default class Dashboard extends Component {
   render() {
     return(
       <View style={styles.container}>
+        <Image source={{uri: this.props.userInfo.avatar_url}} style={styles.image} />
         <Text> Dashboard </Text>
         <Text> {JSON.stringify(this.props.userInfo)} </Text>
       </View>
