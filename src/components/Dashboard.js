@@ -6,9 +6,10 @@ import {
   Image,
   TouchableHighlight,
 } from 'react-native';
+import api from '../utils/api';
 import Profile from './Profile';
 import Repositories from './Repositories';
-import api from '../utils/api';
+import Notes from './Notes';
 
 const styles = StyleSheet.create({
   container: {
@@ -70,7 +71,18 @@ export default class Dashboard extends Component {
   }
 
   goToNotes() {
-    console.log('Going to Notes')
+    api.getNotes(this.props.userInfo.login)
+      .then((res) => {
+        res = res || {}
+        this.props.navigator.push({
+          component: Notes,
+          title: 'Notes',
+          passProps: {
+            notes: res,
+            userInfo: this.props.userInfo
+          }
+        })
+      })
   }
 
   render() {
