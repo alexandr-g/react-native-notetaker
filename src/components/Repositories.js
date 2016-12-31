@@ -8,6 +8,7 @@ import {
 } from 'react-native';
 import Badge from './Badge';
 import Separator from './helpers/Separator';
+import Web_View from './helpers/WebView'
 
 const styles = StyleSheet.create({
     container: {
@@ -37,7 +38,11 @@ const styles = StyleSheet.create({
 export default class Repositories extends Component {
 
   openPage(url) {
-    console.log('URL is:', url)
+    this.props.navigator.push({
+      component: Web_View,
+      title: 'Web View',
+      passProps: {url}
+    })
   }
 
   render() {
