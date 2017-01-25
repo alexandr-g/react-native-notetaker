@@ -17,3 +17,5 @@ You can add Notes and they will be stored inside Firebase cloud database. It is 
 <img width="300" alt="screenshot_2016-12-31_22_46_21" src="https://cloud.githubusercontent.com/assets/9251327/21582073/600b10a4-d04a-11e6-9bd1-42f07ceadda1.png">
 <img width="300" alt="screenshot_2016-12-31_22_50_59" src="https://cloud.githubusercontent.com/assets/9251327/21582074/64440eb4-d04a-11e6-927c-903354164419.png">
 </p>
+
+**Reference:** this app was build as a part of https://github.com/StephenGrider Udemy course
