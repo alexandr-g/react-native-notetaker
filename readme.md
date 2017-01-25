@@ -18,4 +18,22 @@ You can add Notes and they will be stored inside Firebase cloud database. It is 
 <img width="300" alt="screenshot_2016-12-31_22_50_59" src="https://cloud.githubusercontent.com/assets/9251327/21582074/64440eb4-d04a-11e6-927c-903354164419.png">
 </p>
 
+## Ho to run project locally?
+
+**0. Clone the repo:**
+
+`git clone https://github.com/alexandr-g/react-native-notetaker.git`
+
+**1. Install react-native CLI globally** ( for more info on setup steps refer - [React Native Docs](https://facebook.github.io/react-native/docs/getting-started.html) )
+
+`npm install -g react-native-cli`
+
+**2. Install project dependencies:**
+
+`npm i`
+
+**3. To start the project on simulator:**
+
+`react-native run-ios`
+
 **Reference:** this app was build as a part of https://github.com/StephenGrider Udemy course
