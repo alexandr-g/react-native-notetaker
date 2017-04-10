@@ -2,8 +2,6 @@ import React, { Component } from 'react';
 import {
   AppRegistry,
   StyleSheet,
-  Text,
-  View,
   NavigatorIOS
 } from 'react-native';
 import Main from './src/components/Main';
