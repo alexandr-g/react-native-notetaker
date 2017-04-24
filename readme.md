@@ -18,7 +18,7 @@ You can add Notes and they will be stored inside Firebase cloud database. It is 
 <img width="300" alt="screenshot_2016-12-31_22_50_59" src="https://cloud.githubusercontent.com/assets/9251327/21582074/64440eb4-d04a-11e6-927c-903354164419.png">
 </p>
 
-## Ho to run project locally?
+## How to run project locally?
 
 **0. Clone the repo:**
 
